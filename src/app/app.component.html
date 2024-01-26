@@ -1,24 +1,13 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>{{title}}</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar>
+<app-layout-header [title]="title"></app-layout-header>
 
 <mat-sidenav-container class="example-container">
+  <!-- El menu de navegación -->
   <mat-sidenav #sidenav mode="side" opened class="example-sidenav">
-    Sidenav
+    <app-layout-menubar />
   </mat-sidenav>
 
-<mat-sidenav-content>
- 
-  <p>Contenido</p>
-</mat-sidenav-content>
+  <!-- parte del contenido de la pagina, con router outlet que redirecciona a los distintos menus -->
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>
