@@ -10,3 +10,7 @@ import { Component } from '@angular/core';
 export class AuthorComponent {
 
 }
+
+export interface AuthorData {
+  
+}
