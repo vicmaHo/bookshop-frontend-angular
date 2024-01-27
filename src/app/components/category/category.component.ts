@@ -29,7 +29,7 @@ export class CategoryComponent {
           // realizo el mapeo de category a category data
           this.dataSource = categories.map(cat => <CategoryData>{
             id: cat.id,
-            name: cat.name + cat.id
+            name: cat.name
           })
         }
     );
