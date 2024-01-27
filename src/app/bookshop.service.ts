@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Author, Category } from './model/bookshop';
+import { Author, Book, Category } from './model/bookshop';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +26,9 @@ export class BookshopService {
   // getCategoryByid(id: number){
   //   return this.http.get(`${this.BASE_URL}/api/v1/category/${id}`); // llamada al servicio
   // }
+
+  getAllBooks(){
+    return this.http.get<Book[]>(`${this.BASE_URL}/api/v1/book`)
+  }
 
 }

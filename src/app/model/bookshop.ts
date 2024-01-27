@@ -11,3 +11,16 @@ export interface Author {
     lastName: string;
     biography: string;
 }
+
+export interface Book {
+    id: number;
+    title: string;
+    description: string;
+    price: number;
+    isbn: string;
+    pages: number;
+    releaseDate: Date;
+    image: string;
+    categoryId: number;
+    authorId: number;
+}
